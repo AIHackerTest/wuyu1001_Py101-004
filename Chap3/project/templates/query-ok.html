@@ -1,0 +1,6 @@
+{% extends "weather.html" %}
+{% block content %}
+	<p>查询{{ get_name }}的天气情况：</p>
+	<p>实时天气：{{ get_text }}</p>
+	<p>实时体感温度：{{ temperature }}</p>
+{% endblock %}

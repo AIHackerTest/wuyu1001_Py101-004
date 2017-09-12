@@ -1,0 +1,34 @@
+<html>
+	<head>
+<style>
+input[type=text] {
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+h1 {text-align:center;}
+p {text-align:center; }
+div {text-align:center}
+</style>
+		<title>weather info</title>
+	</head>
+	<body>
+		<div>
+		<h1>鬼鬼天气查询网</h1>
+		<img src="https://static.pexels.com/photos/158279/sky-clouds-cloudscape-clouded-158279.jpeg" alt="HTM5 Icon" style="width:700px;height:300px;">
+		<form action="/query" method="get">
+			<h1>输入城市名称：</h1><br>
+			<input type="text" name="city"  placeholder="城市名称" size="40" maxlength="20">
+
+	<input type="submit" value="提交" name="bnt" size="40">
+			<input type="submit" name="history" value="历史"size="40">
+			<input type="submit" value="帮助" name="help"size="40"></br>
+
+	</form>
+	</div>
+	{% if message %}
+	<p style="color:red">{{ message }}</p>
+	{% endif %}
+	<div id="content">{% block content %}{% endblock %}</div>
+	</body>
+
